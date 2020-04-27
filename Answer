@@ -1,0 +1,19 @@
+/**
+ * @param {string} S
+ * @return {number[]}
+ */
+var diStringMatch = function(S) {
+    let i = 0, j = S.length;
+    let res = [];
+    S.split("").forEach(x => {
+        if (x == 'I') {
+            res.push(i);
+            i++;
+        } else {
+            res.push(j);
+            j--;
+        }
+    });
+    res.push(i);
+    return res;
+};
